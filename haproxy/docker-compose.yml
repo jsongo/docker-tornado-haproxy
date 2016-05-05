@@ -1,0 +1,13 @@
+haproxy:
+    image: daocloud.io/haproxy
+    container_name: haproxy-live
+    net: host
+    #ports: 
+        #- 10562:10562
+    restart: always
+    volumes:
+        - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    #external_links:
+        #- live1
+        #- live2
+        #- live3

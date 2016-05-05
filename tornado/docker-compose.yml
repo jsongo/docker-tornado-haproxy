@@ -1,0 +1,27 @@
+tornado-live1:
+    image: tornado
+    container_name: live1
+    net: host
+    restart: always
+    environment:
+        - TORNADO_PORT=10253
+    volumes:
+        - /data/code/python/zhibo:/app
+tornado-live2:
+    image: tornado
+    container_name: live2
+    net: host
+    restart: always
+    environment:
+        - TORNADO_PORT=10254
+    volumes:
+        - /data/code/python/zhibo:/app
+tornado-live3:
+    image: tornado
+    container_name: live3
+    net: host
+    restart: always
+    environment:
+        - TORNADO_PORT=10255
+    volumes:
+        - /data/code/python/zhibo:/app
