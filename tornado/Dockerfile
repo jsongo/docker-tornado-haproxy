@@ -19,7 +19,8 @@ EXPOSE 9021
 
 # other operation for the specific app
 RUN apt-get update
-RUN apt-get install -y libmysqld-dev
+# RUN apt-get install -y libmysqld-dev
+RUN apt-get install -y libpq-dev python-dev
 COPY requirements-others.txt /
 RUN pip install -r /requirements-others.txt
 

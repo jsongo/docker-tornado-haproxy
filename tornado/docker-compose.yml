@@ -25,3 +25,12 @@ tornado-live3:
         - TORNADO_PORT=10255
     volumes:
         - /data/code/python/zhibo:/app
+tornado-live4:
+    image: tornado
+    container_name: live4
+    net: host
+    restart: always
+    environment:
+        - TORNADO_PORT=10256
+    volumes:
+        - /data/code/python/zhibo:/app

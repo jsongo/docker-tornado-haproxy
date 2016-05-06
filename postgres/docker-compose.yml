@@ -1,0 +1,10 @@
+tornado-live1:
+    image: postgres
+    container_name: postgres
+    net: host
+    restart: always
+    environment:
+        - POSTGRES_PASSWORD=initpwd
+        - POSTGRES_USER=pireslive
+    volumes:
+        - /data/postgres/data:/var/lib/postgresql/data
