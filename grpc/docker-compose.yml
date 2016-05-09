@@ -1,0 +1,8 @@
+grpc:
+    build: .
+    #image: grpc
+    container_name: hello-tornado-grpc
+    ports: 
+        - 10162:10162
+    volumes:
+        - ./app:/app
