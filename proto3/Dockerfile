@@ -27,3 +27,6 @@ RUN \
   cd - && \
   rm -rf protobuf-3.0.0-beta-2
 
+git clone https://github.com/grpc/grpc
+cd grpc
+git submodule update --init
