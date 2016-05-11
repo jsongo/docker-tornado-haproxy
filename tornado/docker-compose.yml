@@ -32,5 +32,6 @@ tornado-live4:
     restart: always
     environment:
         - TORNADO_PORT=10256
+        - DEV_ENV=1
     volumes:
         - /data/code/python/zhibo:/app

@@ -1,0 +1,9 @@
+redis-server:
+    image: redis
+    command: redis-server /usr/local/etc/redis/redis.conf
+    container_name: redis-server
+    net: host
+    restart: always
+    volumes:
+        - ./redis-server.conf:/usr/local/etc/redis/redis.conf
+        - /data/redis:/data/redis
