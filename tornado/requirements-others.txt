@@ -2,3 +2,5 @@ pili
 #MySQL-python
 momoko
 tornadis
+#celery
+tornado-celery

@@ -1,0 +1,14 @@
+rabbitmq:
+    image: daocloud.io/library/rabbitmq
+    container_name: rabbitmq
+    net: host
+    restart: always
+    #volumes:
+        #- ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+rabbitmq-manage:
+    image: daocloud.io/rabbitmq:3-management
+    container_name: rabbitmq-manage
+    net: host
+    restart: always
+    #ports: 
+        #- 8081:15672
