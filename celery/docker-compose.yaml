@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    celery:
+        build: .
+        image: celery:latest
+        container_name: celery
+        network_mode: host
+        restart: always
+        volumes:
+            - /data/code/python/zhibo:/app

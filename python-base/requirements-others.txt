@@ -1,8 +1,6 @@
+sqlalchemy
 pili
-#MySQL-python
 momoko
-tornadis
-#celery
 tornado-celery
 requests
 qiniu
