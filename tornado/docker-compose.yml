@@ -22,7 +22,7 @@ tornado-live3:
     net: host
     restart: always
     environment:
-        - TORNADO_PORT=10255
+        - TORNADO_PORT=10257
     volumes:
         - /data/code/python/zhibo:/app
 tornado-live4:
