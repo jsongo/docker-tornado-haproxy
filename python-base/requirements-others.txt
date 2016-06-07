@@ -1,6 +1,6 @@
-sqlalchemy
-pili
 momoko
 tornado-celery
 requests
 qiniu
+sqlalchemy
+beautifulsoup4
