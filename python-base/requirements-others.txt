@@ -4,3 +4,4 @@ requests
 qiniu
 sqlalchemy
 beautifulsoup4
+lxml
