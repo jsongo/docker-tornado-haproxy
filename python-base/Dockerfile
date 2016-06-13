@@ -24,7 +24,7 @@ RUN apt-get install -y libpq-dev python-dev
 COPY requirements-others.txt /
 RUN pip install -v -r /requirements-others.txt
 # 时区
-cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 
 ONBUILD ENTRYPOINT ["/run.sh"]
 ONBUILD CMD ["bash", "-c"]
