@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  etcd-browser:
+    image: etcd-browser
+    container_name: etcd-browser 
+    network_mode: host
+    restart: always
+    environment:
+        - AUTH_USER=jsongo
+        - AUTH_PASS=kMBe64UdUCGr7D
+        - ETCD_HOST=127.0.0.1
+        - ETCD_PORT=2379
+        - SERVER_PORT=5937

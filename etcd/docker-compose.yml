@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  etcd:
+    #image: daocloud.io/jsongo/etcd
+    image: quay.io/coreos/etcd
+    container_name: etcd 
+    network_mode: host
+    restart: always
+    command: >
+        -listen-client-urls http://0.0.0.0:2379
+        -advertise-client-urls http://dash.ygxxcn.com:2379

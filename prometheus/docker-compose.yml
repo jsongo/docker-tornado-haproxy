@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  prometheus:
+    image: index.docker.io/prom/prometheus
+    container_name: prometheus
+    network_mode: host
+    restart: always
+    volumes:
+        - ./prometheus.yml:/etc/prometheus/prometheus.yml
+        #- /data/prometheus:/prometheus-data
+    command: >
+        -config.file=/etc/prometheus/prometheus.yml 
+        -web.external-url "http://dash.ygxxcn.com/prom"
+  promdash:
+    image: index.docker.io/prom/promdash
+    container_name: promdash 
+    network_mode: host
+    restart: always
+    environment:
+        - DATABASE_URL=postgresql://jsongo:MD2v7W9qhCrVkR@127.0.0.1:5432/prom?pool=5
+        - PROMDASH_PATH_PREFIX=/dash
+        - RAILS_RELATIVE_URL_ROOT=/dash
+        - RAILS_ENV="production"
+    #volumes:
+        #- /data/prometheus:/prom
+        #- ./promdash:/usr/src/app

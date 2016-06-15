@@ -1,6 +1,7 @@
 momoko
 tornado-celery
 requests
+redis
 qiniu
 sqlalchemy
 beautifulsoup4
